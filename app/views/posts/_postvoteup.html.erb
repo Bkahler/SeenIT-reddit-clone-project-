@@ -1,0 +1,7 @@
+<form class="Post" id="postVoteUp" name="postVoteUp" method="post" action="/posts/<%=x.id%>/votes" >
+  <input id="user_id" type="hidden" name="user_id" value="<%= current_user.id%>">
+  <input id="class" type="hidden" name="class" value="Post">
+  <input id="vote" type="hidden" name="vote" value= 1 >
+  <input id="button" type="submit" value="upvote">
+    +<%= x.votes.where("vote=1").count%>
+</form>

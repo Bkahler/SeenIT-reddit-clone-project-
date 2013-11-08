@@ -1,0 +1,6 @@
+  <form class="Comment" id="commentComment_form" name="commentComment_form" method="post" action="/comments/<%=text.id%>/comments" >
+          <input id ="comment_text" type="text" name="comment_text" placeholder="enter comments">
+          <input id="user_id" type="hidden" name="user_id" value="<%= current_user.id%>">
+          <input id="user_id" type="hidden" name="class" value="Class">
+          <input id="button" type="submit" value="comment">
+  </form>

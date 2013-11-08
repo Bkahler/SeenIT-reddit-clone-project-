@@ -1,0 +1,11 @@
+<% if current_user %>
+    <form id="post_form" name="post_form" method="post" action="/posts" >
+      <h3> Post Link </h3>
+        <input id="tagline" type="text" name="tagline" placeholder="Add Headline">
+        <input id ="post_link" type="text" name="post_link" placeholder="Paste Link Here">
+        <input id="user_id" type="hidden" name="user_id" value="<%= current_user.id%>">
+        <input id="button" type="submit" value="submit post">
+    </form>
+<%else%>
+<h1> log in </h1>
+<%end%>

@@ -1,0 +1,25 @@
+<%@posts.each do |x|%>
+  <div class="userPost">
+      <%= x.body%>
+      <a href="<%= x.link%>"><%= x.link%></a>
+        <%if current_user %>
+          <%= render 'postvoteup',x:x%> <%=render'postdownvote',x:x%>
+          <%= render 'commentForm', x: x %>
+        <%end%>
+
+      <%x.comments.each do |text|%>
+        <div class="postComment">
+        <%=text.text%><br>
+         <% if current_user %>
+          <%= render 'commentvoteup',text:text %> <%=render'commentdownvote',text:text%>
+          <%= render 'commentComment', text: text%>
+         <%end%>
+          <%text.comments.each do |commentcomment|%>
+          <div class ="commentComment">
+          <%=commentcomment.text%>
+          </div>
+          <%end%>
+       </div>
+      <%end%>
+  </div>
+<%end%>
