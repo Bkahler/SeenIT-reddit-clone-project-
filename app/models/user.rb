@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
    has_many :votes, dependent: :destroy
    has_many :comments, dependent: :destroy
-   has_many :post, dependent: :destroy
+   has_many :posts, dependent: :destroy
 
   def self.create_with_omniauth(auth)
      create! do |user|
@@ -13,4 +13,5 @@ class User < ActiveRecord::Base
       user.name = auth["info"]["name"]
     end
   end
+
 end
