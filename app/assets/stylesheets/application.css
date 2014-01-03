@@ -13,26 +13,138 @@
  */
 
  body{
-  background:url('http://ts1.mm.bing.net/th?id=H.4824421985681668&w=249&h=183&c=7&rs=1&pid=1.7');
+  background-image: url('wallpaper.jpeg');
   color: white;
   background-size: cover;
   font-size: 20px;
+ }
+
+ header{
+  height: 50px;
+  font-size: 10px;
+ }
+
+ h4{
+  margin: 5px;
+ }
+
+ #article_link{
+  color:#2980b9;
+  font-size: 12px;
+ }
+
+ #down_vote{
+  background-color: white;
+  color:#d35400;
+  border: 0px;
+  font-size: 8px;
+  width: 45px;
+  padding: 1px;
+  border-radius: 4px
+ }
+
+ #postVoteDown{
+  font-size: 14px;
+ }
+  #postVoteUp{
+  font-size: 14px;
+ }
+
+ #up_vote{
+  background-color: white;
+  color:#2980b9;
+  border: 0px;
+  font-size: 8px;
+  width: 40px;
+  padding: 1px;
+  border-radius: 4px
+ }
+
+ #comment_form{
+ }
+
+ #comment_button{
+  color:green;
+ }
+
+ #comment_text{
+  border: 0px;
+  background-color: rgba(255, 255, 255,.50)
+ }
+
+ #post_container{
+  overflow: scroll;
+  height: 450px;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+ }
+
+ #post_form{
+  margin-left: auto;
+  margin-right: auto;
+  width:95%;
+  margin-top: -80px;
+  height: 50px;
+  padding-bottom: 10px;
+ }
+
+ #tagline{
+  width: 200px;
+  height: 20px;
+  border: 1.5px solid black;
+  background: rgba(0,0,0,.7);
+  color: white;
+ }
+
+ #post_link{
+  width: 200px;
+  height: 20px;
+  border: 1.5px solid black;
+  background: rgba(0,0,0,.7);
+  color: white;
 
  }
 
+ #button{
+  border: 0px;
+  background: red;
+ }
+
+ #post_button{
+  color: white;
+  background-color: #e74c3c;
+  border: 0px;
+  height: 22px
+ }
+
+ #user{
+  position:absolute;
+  right:50px
+ }
+
+ #title{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 50px;
+  margin-top: -120px;
+ }
+
  .userPost{
-  background: rgba(52, 73, 94,1.0);
+  background: rgba(0,0,0,.7);
   border: 3px solid black;
   padding: 10px;
  }
 
  .postComment{
-  background: rgba(192, 57, 43,1.0);
-  border: 2px solid white;
+  background: rgba(192, 57, 43,.5);
+  border: 0px solid white;
   padding: 10px;
+  font-size: 12px;
  }
  .commentComment{
-  background: rgba(41, 128, 185,1.0);
-  border: 2px solid white;
+  background: rgba(41, 128, 185,.50);
+  /*border: 2px solid white;*/
   padding: 10px;
  }

@@ -1,7 +1,7 @@
 <%@posts.each do |x|%>
   <div class="userPost">
       <%= x.body%>
-      <a href="<%= x.link%>"><%= x.link%></a>
+      <a href="<%= x.link%>" id="article_link">go to article</a>
         <%if current_user %>
           <%= render 'postvoteup',x:x%> <%=render'postdownvote',x:x%>
           <%= render 'commentForm', x: x %>
@@ -9,14 +9,15 @@
 
       <%x.comments.each do |text|%>
         <div class="postComment">
+        <%=text.user.name%>: <%=text.updated_at.strftime("%d %b. %Y")%> <%=text.updated_at.strftime("%l%p")%></br>
         <%=text.text%><br>
          <% if current_user %>
-          <%= render 'commentvoteup',text:text %> <%=render'commentdownvote',text:text%>
           <%= render 'commentComment', text: text%>
          <%end%>
           <%text.comments.each do |commentcomment|%>
           <div class ="commentComment">
-          <%=commentcomment.text%>
+            <%=commentcomment.user.name%> <%=commentcomment.updated_at.strftime("%d %b. %Y")%> <%=commentcomment.updated_at.strftime("%l%p")%></br>
+            <%=commentcomment.text%>
           </div>
           <%end%>
        </div>

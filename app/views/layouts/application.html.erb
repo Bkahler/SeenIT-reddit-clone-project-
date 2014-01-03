@@ -6,16 +6,22 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<header>
+  <div id="user">
+    <% if current_user %>
+    Welcome <%= current_user.name %>!
+    <%= link_to "Sign Out", signout_path %>
+    <% else %>
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+    <% end %>
+  </div>
 
-  <% if current_user %>
-  Welcome <%= current_user.name %>!
-  <%= link_to "Sign Out", signout_path %>
-  <% else %>
-  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-  <% end %>
+</header>
 
-<%= yield %>
-
-</body>
+  <body>
+    <div id="title">
+      <h1> SeenIT</h1>
+    </div>
+    <%= yield %>
+  </body>
 </html>
